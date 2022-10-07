@@ -5,13 +5,14 @@ let createButton = document.getElementById('inputButton');
 let gameInfo = document.getElementById('gameBar');
 let ratingInfo = document.getElementById('ratingBar');
 let systemInfo = document.getElementById('systemBar');
-app.use(express.static('public'))
+
+//app.use(express.static('public'));
 
 
-let URL = ENV == "dev" ? 'https://game-list-ui.onrender.com' : 'http://localhost:3000/api/';
+let URL = ENV == "dev" ? 'https://game-list-ui.onrender.com' : 'http://localhost:3000/api/games';
 
 searchButton.addEventListener("click", () => {
-    fetch(`${URL}games`)
+    fetch(URL)
         .then((response) => response.json())
         .then((data) => showData(data));
 })
