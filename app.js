@@ -9,7 +9,7 @@ let systemInfo = document.getElementById('systemBar');
 //app.use(express.static('public'));
 
 
-let URL = ENV == "dev" ? 'https://game-list.onrender.com/api/games' : 'http://localhost:3000/api/games';
+let URL = ENV == "production" ? 'https://game-list.onrender.com/api/games' : 'http://localhost:3000/api/games';
 
 searchButton.addEventListener("click", () => {
     fetch(URL)
