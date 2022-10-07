@@ -1,0 +1,19 @@
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+h2 {
+    color: rgb(28, 28, 242);
+    margin-left: 20px;
+  }
+
+  h3 {
+    color: rgb(95, 95, 255);
+    margin-left: 20px;
+  }
