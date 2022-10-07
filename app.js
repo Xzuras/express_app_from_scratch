@@ -5,10 +5,10 @@ let createButton = document.getElementById('inputButton');
 let gameInfo = document.getElementById('gameBar');
 let ratingInfo = document.getElementById('ratingBar');
 let systemInfo = document.getElementById('systemBar');
+app.use(express.static('public'))
 
 
-
-let URL = ENV !== "dev" ? 'http://localhost:3000/api/' : 'https://game-list-ui.onrender.com';
+let URL = ENV == "dev" ? 'https://game-list-ui.onrender.com' : 'http://localhost:3000/api/';
 
 searchButton.addEventListener("click", () => {
     fetch(`${URL}games`)
