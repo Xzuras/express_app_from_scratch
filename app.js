@@ -1,3 +1,4 @@
+const ENV = "production";
 let searchBar = document.getElementById('searchBar');
 let searchButton = document.getElementById('searchButton');
 let createButton = document.getElementById('inputButton');
@@ -7,7 +8,7 @@ let systemInfo = document.getElementById('systemBar');
 
 
 
-let URL = 'http://localhost:3000/api/'
+let URL = ENV == "dev" ? 'http://localhost:3000/api/' : 'https://game-list-ui.onrender.com/';
 
 searchButton.addEventListener("click", () => {
     fetch(`${URL}games`)
