@@ -8,7 +8,7 @@ let systemInfo = document.getElementById('systemBar');
 
 
 
-let URL = ENV == "dev" ? 'http://localhost:3000/api/' : 'https://game-list-ui.onrender.com/';
+let URL = ENV == "dev" ? 'http://localhost:3000/api/' : 'https://game-list-ui.onrender.com';
 
 searchButton.addEventListener("click", () => {
     fetch(`${URL}games`)
